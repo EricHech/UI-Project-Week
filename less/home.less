@@ -29,7 +29,7 @@
     // max-width: 1024px;
     width: 100%;
     height: 600px;
-    background: url("../img/home/home-jumbotron.png");
+    background: url('../img/home/home-jumbotron.png');
     background-size: cover;
     margin: auto;
     position: relative;
@@ -85,6 +85,9 @@
     }
 
     .main-content-bottom {
+      h3 {
+        padding-left: 10px;
+      }
       .bottom-content-block {
         .center;
         flex-direction: column;
@@ -104,6 +107,11 @@
             bottom: -50px;
             left: 0px;
           }
+
+          img {
+            width: 100%;
+            height: auto;
+          }
         }
 
         .project-text {
@@ -120,16 +128,52 @@
   footer {
     width: 100%;
     background-color: @footer-bg;
+    padding-top: 65px;
 
     .footer-content {
       .footer-text;
       display: flex;
       max-width: 864px;
       margin: auto;
+
+      .contact {
+        width: 40%;
+        margin: 0px 7px;
+
+        h4 {
+          .footer-headers;
+        }
+
+        .form-placeholder {
+          display: flex;
+          padding-left: 10px;
+          margin: 10px 0;
+          align-items: center;
+          max-width: 275px;
+          width: 100%;
+          height: 40px;
+          border: 1px solid gray;
+          border-radius: 3px;
+          background: white;
+          color: gray;
+        }
+      }
+
+      .locations {
+        width: 20%;
+        margin: 0px 7px;
+
+        h4 {
+          .footer-headers;
+        }
+      }
     }
 
     .copyright {
       .center;
+      padding: 40px 0 15px 0;
+      color: @footer;
+      font-size: 1.2rem;
     }
   }
 }
