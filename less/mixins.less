@@ -1,8 +1,31 @@
+.center () {
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-logo () {
+  font-weight: bold;
+  font-size: 2.4rem;
+  color: @nav;
+}
+
+.nav-text () {
+  font-weight: bold;
+  font-size: 4.8rem;
+  line-height: 8.5rem;
+  color: @nav;
+
+  &:hover {
+    color: @nav-expanded-hover;
+  }
+}
+
 .jumbotron-headers () {
   font-weight: bold;
   font-size: 6.4rem;
   line-height: 7.5rem;
   color: @jumbotron-header;
+  z-index: 10;
 }
 
 .sub-headers () {
@@ -25,24 +48,31 @@
   color: @footer;
 }
 
-.nav-logo () {
-  font-weight: bold;
-  font-size: 2.4rem;
-  color: @nav;
-}
-
-.nav-text () {
-  font-weight: bold;
-  font-size: 4.8rem;
-  line-height: 8.5rem;
-  color: @nav;
-}
-
 #buttons {
+  .hover {
+    background: @tab-hover-bg;
+    color: @tab-hover;
+  }
   .btn-main () {
+    display: flex;
     border: solid 1px @button-border;
     width: 135px;
-    height: 45;
+    height: 45px;
+    .center;
+
+    &:hover {
+      #buttons.hover;
+    }
+  }
+
+  .tabs () {
+    border: solid 1px @button-border;
+    width: 180px;
+    height: 50px;
     text-align: center;
+
+    &:hover {
+      #buttons.hover;
+    }
   }
 }

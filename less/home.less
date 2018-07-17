@@ -1,4 +1,88 @@
-// .homepage {
-//   .menu {
-//   }
-// }
+.homepage {
+  .menu {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background: @nav-bar-bg;
+    opacity: 0.9;
+    z-index: 20;
+
+    .navbar {
+      .nav-logo;
+      display: flex;
+      max-width: 1024px;
+      width: 100%;
+      height: 50px;
+      padding: 0px 85px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .menu-items {
+      display: none;
+    }
+  }
+
+  .jumbotron {
+    max-width: 1024px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+    // ! Is the position absolute/relative
+    // ! and z-indexing here with the menu
+    // ! bar and the jumbotron hacky or good?
+    .jtron-header {
+      .jumbotron-headers;
+      position: absolute;
+      bottom: 50px;
+      left: 80px;
+    }
+  }
+
+  .main-content {
+    max-width: 864px;
+    width: 100%;
+    margin: auto;
+
+    .main-content-top {
+      margin: 0 10px;
+
+      .main-content-block {
+        display: flex;
+        justify-content: space-between;
+        margin: 50px 0px;
+
+        .main-content-info {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          width: 49%;
+
+          span {
+            line-height: 2.5rem;
+          }
+
+          .button {
+            #buttons.btn-main;
+          }
+        }
+
+        img {
+          width: 49%;
+          height: auto;
+        }
+      }
+    }
+
+    .main-content-bottom {
+
+    }
+  }
+}
