@@ -238,6 +238,7 @@ h3 {
   border: solid 1px #222222;
   width: 135px;
   height: 45px;
+  cursor: pointer;
 }
 .homepage .main-content .main-content-top .top-content-block .top-content-info .button:hover {
   background: #222222;
