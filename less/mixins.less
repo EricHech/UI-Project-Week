@@ -1,4 +1,5 @@
 .center () {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -25,13 +26,23 @@
   font-size: 6.4rem;
   line-height: 7.5rem;
   color: @jumbotron-header;
-  z-index: 10;
 }
 
 .sub-headers () {
   font-weight: bold;
   font-size: 2.8rem;
   color: @sub-header;
+}
+
+.project-titles () {
+  .center;
+  height: 95px;
+  width: 315px;
+  font-size: 2rem;
+  font-weight: lighter;
+  letter-spacing: 0.7rem;
+  background-color: @project-title-bg;
+  border: solid 1px white;
 }
 
 .footer-headers () {
@@ -54,11 +65,10 @@
     color: @tab-hover;
   }
   .btn-main () {
-    display: flex;
+    .center;
     border: solid 1px @button-border;
     width: 135px;
     height: 45px;
-    .center;
 
     &:hover {
       #buttons.hover;

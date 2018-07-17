@@ -189,24 +189,26 @@ h3 {
   display: none;
 }
 .homepage .jumbotron {
-  max-width: 1024px;
   width: 100%;
+  height: 600px;
+  background: url("../img/home/home-jumbotron.png");
+  background-size: cover;
   margin: auto;
   position: relative;
+  background: orange;
 }
 .homepage .jumbotron img {
   width: 100%;
-  height: auto;
 }
 .homepage .jumbotron .jtron-header {
   font-weight: bold;
   font-size: 6.4rem;
   line-height: 7.5rem;
   color: #ffffff;
-  z-index: 10;
   position: absolute;
   bottom: 50px;
   left: 80px;
+  z-index: 10;
 }
 .homepage .main-content {
   max-width: 864px;
@@ -216,33 +218,98 @@ h3 {
 .homepage .main-content .main-content-top {
   margin: 0 10px;
 }
-.homepage .main-content .main-content-top .main-content-block {
+.homepage .main-content .main-content-top .top-content-block {
   display: flex;
   justify-content: space-between;
   margin: 50px 0px;
 }
-.homepage .main-content .main-content-top .main-content-block .main-content-info {
+.homepage .main-content .main-content-top .top-content-block .top-content-info {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   width: 49%;
 }
-.homepage .main-content .main-content-top .main-content-block .main-content-info span {
+.homepage .main-content .main-content-top .top-content-block .top-content-info span {
   line-height: 2.5rem;
 }
-.homepage .main-content .main-content-top .main-content-block .main-content-info .button {
+.homepage .main-content .main-content-top .top-content-block .top-content-info .button {
   display: flex;
+  justify-content: center;
+  align-items: center;
   border: solid 1px #222222;
   width: 135px;
   height: 45px;
-  justify-content: center;
-  align-items: center;
 }
-.homepage .main-content .main-content-top .main-content-block .main-content-info .button:hover {
+.homepage .main-content .main-content-top .top-content-block .top-content-info .button:hover {
   background: #222222;
   color: #ffffff;
 }
-.homepage .main-content .main-content-top .main-content-block img {
+.homepage .main-content .main-content-top .top-content-block img {
   width: 49%;
   height: auto;
+}
+.homepage .main-content .main-content-bottom .bottom-content-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.homepage .main-content .main-content-bottom .bottom-content-block .projects {
+  position: relative;
+  margin: 50px 0px;
+}
+.homepage .main-content .main-content-bottom .bottom-content-block .projects .recent-project-titles-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95px;
+  width: 315px;
+  font-size: 2rem;
+  font-weight: lighter;
+  letter-spacing: 0.7rem;
+  background-color: #d8d8d8;
+  border: solid 1px white;
+  position: absolute;
+  bottom: -50px;
+  right: 0px;
+}
+.homepage .main-content .main-content-bottom .bottom-content-block .projects .recent-project-titles-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95px;
+  width: 315px;
+  font-size: 2rem;
+  font-weight: lighter;
+  letter-spacing: 0.7rem;
+  background-color: #d8d8d8;
+  border: solid 1px white;
+  position: absolute;
+  bottom: -50px;
+  left: 0px;
+}
+.homepage .main-content .main-content-bottom .bottom-content-block .project-text {
+  margin: 50px 0px;
+  max-width: 435px;
+  width: 100%;
+  line-height: 2.3rem;
+  color: #222222;
+}
+.homepage footer {
+  width: 100%;
+  background-color: #9aa4ad;
+}
+.homepage footer .footer-content {
+  font-weight: regular;
+  font-size: 1.4rem;
+  line-height: 2.6rem;
+  color: #ffffff;
+  display: flex;
+  max-width: 864px;
+  margin: auto;
+}
+.homepage footer .copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

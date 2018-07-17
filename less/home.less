@@ -26,14 +26,17 @@
   }
 
   .jumbotron {
-    max-width: 1024px;
+    // max-width: 1024px;
     width: 100%;
+    height: 600px;
+    background: url("../img/home/home-jumbotron.png");
+    background-size: cover;
     margin: auto;
     position: relative;
+    background: orange;
 
     img {
       width: 100%;
-      height: auto;
     }
     // ! Is the position absolute/relative
     // ! and z-indexing here with the menu
@@ -43,6 +46,7 @@
       position: absolute;
       bottom: 50px;
       left: 80px;
+      z-index: 10;
     }
   }
 
@@ -54,12 +58,12 @@
     .main-content-top {
       margin: 0 10px;
 
-      .main-content-block {
+      .top-content-block {
         display: flex;
         justify-content: space-between;
         margin: 50px 0px;
 
-        .main-content-info {
+        .top-content-info {
           display: flex;
           flex-direction: column;
           justify-content: space-evenly;
@@ -81,8 +85,52 @@
       }
     }
 
-    // .main-content-bottom {
+    .main-content-bottom {
+      .bottom-content-block {
+        .center;
+        flex-direction: column;
+        .projects {
+          position: relative;
+          margin: 50px 0px;
 
-    // }
+          .recent-project-titles-right {
+            .project-titles;
+            position: absolute;
+            bottom: -50px;
+            right: 0px;
+          }
+          .recent-project-titles-left {
+            .project-titles;
+            position: absolute;
+            bottom: -50px;
+            left: 0px;
+          }
+        }
+
+        .project-text {
+          margin: 50px 0px;
+          max-width: 435px;
+          width: 100%;
+          line-height: 2.3rem;
+          color: @text-color;
+        }
+      }
+    }
+  }
+
+  footer {
+    width: 100%;
+    background-color: @footer-bg;
+
+    .footer-content {
+      .footer-text;
+      display: flex;
+      max-width: 864px;
+      margin: auto;
+    }
+
+    .copyright {
+      .center;
+    }
   }
 }
