@@ -276,6 +276,9 @@ h3 {
   width: 49%;
   height: auto;
 }
+.main-content .main-content-top .top-content-block:nth-child(2n - 1) {
+  flex-direction: row-reverse;
+}
 .main-content .main-content-bottom h3 {
   padding-left: 10px;
 }
@@ -284,9 +287,6 @@ h3 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-.main-content .main-content-bottom .bottom-content-block:first-child {
-  background: green;
 }
 .main-content .main-content-bottom .bottom-content-block .projects {
   position: relative;
@@ -317,6 +317,10 @@ h3 {
   width: 100%;
   line-height: 2.5rem;
   color: #222222;
+}
+.main-content .main-content-bottom .bottom-content-block:nth-child(2n - 1) .recent-project-titles {
+  right: 0px;
+  left: initial;
 }
 .services-jtron {
   width: 100%;
