@@ -276,6 +276,9 @@ h3 {
   width: 49%;
   height: auto;
 }
+.main-content .main-content-bottom:first-child {
+  background: purple;
+}
 .main-content .main-content-bottom h3 {
   padding-left: 10px;
 }
@@ -376,12 +379,13 @@ h3 {
   line-height: 2.5rem;
   width: 48%;
 }
-.services-content .tab-content .tab-content_revealed {
-  display: block;
-}
 .services-content .tab_selected {
   background: #5e9fb9;
   color: #ffffff;
+}
+.tab-content_revealed {
+  display: block;
+  background: red;
 }
 footer {
   width: 100%;
@@ -389,7 +393,6 @@ footer {
   padding-top: 65px;
 }
 footer .footer-content {
-  font-weight: regular;
   font-size: 1.4rem;
   line-height: 2.6rem;
   color: #ffffff;
@@ -402,7 +405,6 @@ footer .footer-content .contact {
   margin: 0px 7px;
 }
 footer .footer-content .contact h4 {
-  font-weight: regular;
   font-size: 2rem;
   line-height: 2.4rem;
   color: #ffffff;
@@ -425,7 +427,6 @@ footer .footer-content .locations {
   margin: 0px 7px;
 }
 footer .footer-content .locations h4 {
-  font-weight: regular;
   font-size: 2rem;
   line-height: 2.4rem;
   color: #ffffff;

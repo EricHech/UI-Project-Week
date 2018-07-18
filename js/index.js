@@ -13,27 +13,33 @@ navBtn.addEventListener('click', () => {
 
 //--------------------------------------------------------------------
 
-class Tabs {
-  constructor (element) {
-    this.element = element;
-    this.tabs = this.element.map((eachTab) => new TabItem(eachTab, this));
-    this.active = this.tabs[0].element;
+class TabNav {
+  constructor (links, content) {
+    this.links = links;
+    this.content = content;
+    this.links = this.links.map((eachLink) => new TabLink(eachLink, this));
+    this.activeLink = this.links[0].element;
+    this.activeContent = this.content[0];
     this.init();
   }
 
   init () {
-    console.log(this.active);
-    this.active.classList.add("tab_selected");
+    this.activeLink.classList.add("tab_selected");
+    this.activeContent.classList.add("tab-content_revealed");
   }
 
-  updateActive(activate) {
-    this.active.classList.remove('tab_selected');
-    this.active = activate;
-    this.active.classList.add("tab_selected");
+  updateActive(newLink, newContent) {
+    this.activeLink.classList.remove('tab_selected');
+    this.activeLink = newLink;
+    this.activeLink.classList.add("tab_selected");
+
+    this.activeContent.classList.remove('tab-content_revealed');
+    this.activeContent = newContent;
+    this.activeContent.classList.add("tab-content_revealed");
   }
 }
 
-class TabItem {
+class TabLink {
   constructor(element, parent) {
     this.element = element;
     this.parent = parent;
@@ -41,10 +47,12 @@ class TabItem {
   }
 
   onClick() {
-    this.parent.updateActive(this.element);
+    const data = this.element.dataset.tab;
+    this.parent.updateActive(this.element, this.parent.content[data]);
   }
 }
 
-const tabs = new Tabs(Array.from(document.querySelectorAll('.tabs .each-tab')));
-const tabContent = document.querySelectorAll('.tabs .tab-content');
-console.log(tabContent);
+const tabLinks = Array.from(document.querySelectorAll('.tabs .each-tab'));
+const tabContent = Array.from(document.querySelectorAll('.tab-content'));
+
+const tabNav = new TabNav(tabLinks, tabContent);
