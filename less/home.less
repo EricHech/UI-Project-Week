@@ -1,71 +1,5 @@
-.homepage {
-  .menu {
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-    height: @menu-height;
-    background: @nav-bar-bg;
-    opacity: @menu-opacity;
-    z-index: 20;
-
-    .navbar {
-      .nav-logo;
-      display: flex;
-      max-width: 1024px;
-      width: 100%;
-      height: @menu-height;
-      padding: 0px 85px;
-      justify-content: space-between;
-      align-items: center;
-
-      img {
-        cursor: pointer;
-      }
-    }
-  }
-
-  .menu-items {
-    display: none;
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    margin-top: @menu-height;
-    background: @nav-bar-bg;
-    opacity: @menu-opacity;
-    z-index: 20;
-
-    li {
-      .nav-text-expanded;
-    }
-  }
-
-  .menu-items_revealed {
-    .center;
-  }
-
-  .jumbotron {
-    // max-width: 1024px;
-    width: 100%;
-    height: 600px;
-    background: url('../img/home/home-jumbotron.png');
-    background-size: cover;
-    margin: auto;
-    position: relative;
-
-    img {
-      width: 100%;
-    }
-    // ! Is the position absolute/relative
-    // ! and z-indexing here with the menu
-    // ! bar and the jumbotron hacky or good?
-    .jtron-header {
-      .jumbotron-headers;
-      position: absolute;
-      bottom: 50px;
-      left: 80px;
-      z-index: 10;
-    }
+  .home-jtron {
+    .jumbotron-mixin(@home-jumbo, 600px, 50px);
   }
 
   .main-content {
@@ -88,12 +22,11 @@
           width: 49%;
 
           span {
-            line-height: 2.5rem;
+            line-height: @line-height;
           }
 
           .button {
             #buttons.btn-main;
-            cursor: pointer;
           }
         }
 
@@ -108,20 +41,16 @@
       h3 {
         padding-left: 10px;
       }
+
       .bottom-content-block {
         .center;
         flex-direction: column;
+
         .projects {
           position: relative;
           margin: 50px 0px;
 
-          .recent-project-titles-right {
-            .project-titles;
-            position: absolute;
-            bottom: -50px;
-            right: 0px;
-          }
-          .recent-project-titles-left {
+          .recent-project-titles {
             .project-titles;
             position: absolute;
             bottom: -50px;
@@ -138,62 +67,18 @@
           margin: 50px 0px;
           max-width: 435px;
           width: 100%;
-          line-height: 2.3rem;
+          line-height: @line-height;
           color: @text-color;
         }
       }
+
+      // :nth-child(1) {
+      //   background: blue;
+      // }
+
+      // :last-child {
+      //   right: 0px;
+      //   background: red;
+      // }
     }
   }
-
-  footer {
-    width: 100%;
-    background-color: @footer-bg;
-    padding-top: 65px;
-
-    .footer-content {
-      .footer-text;
-      display: flex;
-      max-width: 864px;
-      margin: auto;
-
-      .contact {
-        width: 40%;
-        margin: 0px 7px;
-
-        h4 {
-          .footer-headers;
-        }
-
-        .form-placeholder {
-          display: flex;
-          padding-left: 10px;
-          margin: 10px 0;
-          align-items: center;
-          max-width: 275px;
-          width: 100%;
-          height: 40px;
-          border: 1px solid gray;
-          border-radius: 3px;
-          background: white;
-          color: gray;
-        }
-      }
-
-      .locations {
-        width: 20%;
-        margin: 0px 7px;
-
-        h4 {
-          .footer-headers;
-        }
-      }
-    }
-
-    .copyright {
-      .center;
-      padding: 40px 0 15px 0;
-      color: @footer;
-      font-size: 1.2rem;
-    }
-  }
-}
