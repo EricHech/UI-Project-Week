@@ -192,7 +192,7 @@ h3 {
   display: none;
   height: 100vh;
   width: 100vw;
-  position: absolute;
+  position: fixed;
   margin-top: 50px;
   background: #828282;
   opacity: 0.9;
