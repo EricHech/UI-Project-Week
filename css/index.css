@@ -276,9 +276,6 @@ h3 {
   width: 49%;
   height: auto;
 }
-.main-content .main-content-bottom:first-child {
-  background: purple;
-}
 .main-content .main-content-bottom h3 {
   padding-left: 10px;
 }
@@ -287,6 +284,9 @@ h3 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.main-content .main-content-bottom .bottom-content-block:first-child {
+  background: green;
 }
 .main-content .main-content-bottom .bottom-content-block .projects {
   position: relative;
@@ -379,13 +379,12 @@ h3 {
   line-height: 2.5rem;
   width: 48%;
 }
+.services-content .tab-content_revealed {
+  display: block;
+}
 .services-content .tab_selected {
   background: #5e9fb9;
   color: #ffffff;
-}
-.tab-content_revealed {
-  display: block;
-  background: red;
 }
 footer {
   width: 100%;
