@@ -226,29 +226,29 @@ h3 {
   background-size: cover;
   margin: auto;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .home-jtron img {
   width: 100%;
 }
 .home-jtron .jtron-header {
+  max-width: 894px;
+  width: 100%;
+  margin-left: 15px;
   font-weight: bold;
   font-size: 6.4rem;
   line-height: 7.5rem;
   color: #ffffff;
   position: absolute;
-  bottom: 50px;
-  left: 85px;
+  bottom: 8.3%;
   z-index: 10;
 }
 .main-content {
   max-width: 864px;
   width: 100%;
   margin: auto;
-}
-@media (max-width: 700px) {
-  .main-content {
-    background: pink;
-  }
 }
 .main-content .main-content-top {
   margin: 0 10px;
@@ -258,15 +258,23 @@ h3 {
   justify-content: space-between;
   margin: 50px 0px;
 }
+@media (max-width: 600px) {
+  .main-content .main-content-top .top-content-block {
+    align-items: center;
+  }
+}
 .main-content .main-content-top .top-content-block .top-content-info {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   width: 49%;
 }
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   .main-content .main-content-top .top-content-block .top-content-info {
     width: 98%;
+  }
+  .main-content .main-content-top .top-content-block .top-content-info h3 {
+    margin: 30px 0;
   }
 }
 .main-content .main-content-top .top-content-block .top-content-info span {
@@ -285,16 +293,33 @@ h3 {
   background: #222222;
   color: #ffffff;
 }
+@media (max-width: 600px) {
+  .main-content .main-content-top .top-content-block .top-content-info .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px #222222;
+    width: 100%;
+    height: 45px;
+    cursor: pointer;
+    margin-top: 30px;
+    align-self: center;
+  }
+  .main-content .main-content-top .top-content-block .top-content-info .button:hover {
+    background: #222222;
+    color: #ffffff;
+  }
+}
 .main-content .main-content-top .top-content-block img {
   width: 49%;
   height: 100%;
 }
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   .main-content .main-content-top .top-content-block img {
     width: 98%;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   .main-content .main-content-top .top-content-block .desktop-img {
     display: none;
   }
@@ -305,14 +330,22 @@ h3 {
 .main-content .main-content-top .top-content-block:nth-child(2n - 1) {
   flex-direction: row-reverse;
 }
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   .main-content .main-content-top .top-content-block:nth-child(2n - 1) {
     flex-direction: column;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   .main-content .main-content-top .top-content-block {
     flex-direction: column;
+  }
+}
+.main-content .main-content-bottom {
+  padding-top: 50px;
+}
+@media (max-width: 600px) {
+  .main-content .main-content-bottom {
+    padding-top: 5px;
   }
 }
 .main-content .main-content-bottom h3 {
@@ -323,10 +356,12 @@ h3 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 0 10px;
 }
 .main-content .main-content-bottom .bottom-content-block .projects {
   position: relative;
   margin: 50px 0px;
+  width: 100%;
 }
 .main-content .main-content-bottom .bottom-content-block .projects .recent-project-titles {
   display: flex;
@@ -341,11 +376,27 @@ h3 {
   border: solid 1px white;
   position: absolute;
   bottom: -50px;
-  left: 0px;
+}
+@media (max-width: 600px) {
+  .main-content .main-content-bottom .bottom-content-block .projects .recent-project-titles {
+    bottom: -80px;
+    left: 0px;
+    right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .main-content .main-content-bottom .bottom-content-block .projects img {
   width: 100%;
   height: auto;
+}
+@media (max-width: 600px) {
+  .main-content .main-content-bottom .bottom-content-block .projects .desktop-img {
+    display: none;
+  }
+  .main-content .main-content-bottom .bottom-content-block .projects .mobile-img {
+    display: block;
+  }
 }
 .main-content .main-content-bottom .bottom-content-block .project-text {
   margin: 50px 0px;
@@ -354,9 +405,8 @@ h3 {
   line-height: 2.5rem;
   color: #222222;
 }
-.main-content .main-content-bottom .bottom-content-block:nth-child(2n - 1) .recent-project-titles {
+.main-content .main-content-bottom .bottom-content-block:nth-child(2n) .recent-project-titles {
   right: 0px;
-  left: initial;
 }
 .services-jtron {
   width: 100%;
@@ -365,18 +415,23 @@ h3 {
   background-size: cover;
   margin: auto;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .services-jtron img {
   width: 100%;
 }
 .services-jtron .jtron-header {
+  max-width: 894px;
+  width: 100%;
+  margin-left: 15px;
   font-weight: bold;
   font-size: 6.4rem;
   line-height: 7.5rem;
   color: #ffffff;
   position: absolute;
-  bottom: 30px;
-  left: 85px;
+  bottom: 8.3%;
   z-index: 10;
 }
 .services-content {
@@ -431,6 +486,11 @@ footer {
   background-color: #9aa4ad;
   padding-top: 65px;
 }
+@media (max-width: 600px) {
+  footer {
+    padding-top: 30px;
+  }
+}
 footer .footer-content {
   font-size: 1.4rem;
   line-height: 2.6rem;
@@ -439,9 +499,19 @@ footer .footer-content {
   max-width: 864px;
   margin: auto;
 }
+@media (max-width: 600px) {
+  footer .footer-content {
+    flex-direction: column;
+  }
+}
 footer .footer-content .contact {
   width: 40%;
   margin: 0px 7px;
+}
+@media (max-width: 600px) {
+  footer .footer-content .contact {
+    width: 100%;
+  }
 }
 footer .footer-content .contact h4 {
   font-size: 2rem;
@@ -461,9 +531,20 @@ footer .footer-content .contact .form-placeholder {
   background: white;
   color: gray;
 }
+@media (max-width: 600px) {
+  footer .footer-content .contact .form-placeholder {
+    max-width: inherit;
+  }
+}
 footer .footer-content .locations {
   width: 20%;
   margin: 0px 7px;
+}
+@media (max-width: 600px) {
+  footer .footer-content .locations {
+    width: 100%;
+    margin: 15px 0;
+  }
 }
 footer .footer-content .locations h4 {
   font-size: 2rem;

@@ -3,15 +3,27 @@ footer {
   background-color: @footer-bg;
   padding-top: 65px;
 
+  @media @mobile {
+    padding-top: 30px;
+  }
+
   .footer-content {
     .footer-text;
     display: flex;
     max-width: 864px;
     margin: auto;
 
+    @media @mobile {
+      flex-direction: column;
+    }
+
     .contact {
       width: 40%;
       margin: 0px 7px;
+
+      @media @mobile {
+        width: 100%;
+      }
 
       h4 {
         .footer-headers;
@@ -29,12 +41,21 @@ footer {
         border-radius: 3px;
         background: white;
         color: gray;
+
+        @media @mobile {
+          max-width: inherit;
+        }
       }
     }
 
     .locations {
       width: 20%;
       margin: 0px 7px;
+
+      @media @mobile {
+        width: 100%;
+        margin: 15px 0;
+      }
 
       h4 {
         .footer-headers;
