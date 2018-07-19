@@ -6,6 +6,9 @@
   max-width: 864px;
   width: 100%;
   margin: auto;
+  @media @mobile {
+    background: pink;
+  }
 
   .main-content-top {
     margin: 0 10px;
@@ -21,6 +24,10 @@
         justify-content: space-evenly;
         width: 49%;
 
+        @media @mobile {
+          width: 98%;
+        }
+
         span {
           line-height: @line-height;
         }
@@ -32,11 +39,31 @@
 
       img {
         width: 49%;
-        height: auto;
+        height: 100%;
+
+        @media @mobile {
+          width: 98%;
+        }
+      }
+
+      @media @mobile {
+        .desktop-img {
+          display: none;
+        }
+        .mobile-img {
+          display: block;
+        }
       }
 
       &:nth-child(2n - 1) {
         flex-direction: row-reverse;
+        @media @mobile {
+          flex-direction: column;
+        }
+      }
+
+      @media @mobile {
+        flex-direction: column;
       }
     }
   }
