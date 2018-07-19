@@ -226,6 +226,7 @@ h3 {
   background-size: cover;
   margin: auto;
   position: relative;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -415,6 +416,7 @@ h3 {
   background-size: cover;
   margin: auto;
   position: relative;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -483,7 +485,7 @@ h3 {
 }
 footer {
   width: 100%;
-  background-color: #9aa4ad;
+  background-color: #828282;
   padding-top: 65px;
 }
 @media (max-width: 600px) {
@@ -502,6 +504,9 @@ footer .footer-content {
 @media (max-width: 600px) {
   footer .footer-content {
     flex-direction: column;
+    align-items: center;
+    max-width: inherit;
+    padding: 0px 10px;
   }
 }
 footer .footer-content .contact {
@@ -511,6 +516,7 @@ footer .footer-content .contact {
 @media (max-width: 600px) {
   footer .footer-content .contact {
     width: 100%;
+    padding-bottom: 15px;
   }
 }
 footer .footer-content .contact h4 {
