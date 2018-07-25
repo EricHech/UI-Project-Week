@@ -1,4 +1,4 @@
-const navBtn = document.querySelector('.menu .navbar img');
+const navBtn = document.querySelector('nav .navbar img');
 const menu = document.querySelector('.menu-items');
 const menuItems = document.querySelectorAll('.menu-items li');
 

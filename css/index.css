@@ -150,6 +150,7 @@ html,
 body {
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
+  color: #222222;
 }
 h1,
 h2,
@@ -166,7 +167,7 @@ h3 {
 .mobile-img {
   display: none;
 }
-.menu {
+nav {
   display: flex;
   justify-content: center;
   position: fixed;
@@ -176,7 +177,7 @@ h3 {
   opacity: 0.9;
   z-index: 20;
 }
-.menu .navbar {
+nav .navbar {
   font-weight: bold;
   font-size: 2.4rem;
   color: #ffffff;
@@ -188,7 +189,7 @@ h3 {
   justify-content: space-between;
   align-items: center;
 }
-.menu .navbar img {
+nav .navbar img {
   cursor: pointer;
 }
 .menu-items {
@@ -457,7 +458,6 @@ h3 {
   border: solid 1px #222222;
   width: 180px;
   height: 50px;
-  text-align: center;
   cursor: pointer;
 }
 .services-content .tabs .each-tab:hover {
@@ -524,7 +524,7 @@ footer .footer-content .contact h4 {
   line-height: 2.4rem;
   color: #ffffff;
 }
-footer .footer-content .contact .form-placeholder {
+footer .footer-content .contact input {
   display: flex;
   padding-left: 10px;
   margin: 10px 0;
@@ -538,7 +538,7 @@ footer .footer-content .contact .form-placeholder {
   color: gray;
 }
 @media (max-width: 600px) {
-  footer .footer-content .contact .form-placeholder {
+  footer .footer-content .contact input {
     max-width: inherit;
   }
 }
