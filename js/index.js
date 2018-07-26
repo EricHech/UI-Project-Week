@@ -11,6 +11,3 @@ navBtn.addEventListener('click', () => {
   !isOpen ? navBtn.src =  "img/nav-hamburger.png" : navBtn.src = "img/nav-hamburger-close.png";
   menuTween.reversed() ? menuTween.play() : menuTween.reverse();
 });
-
-//--------------------------------------------------------------------
-
